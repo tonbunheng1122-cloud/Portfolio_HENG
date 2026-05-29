@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heng | Web Developer</title>
+  <meta name="description" content="BunHeng — Professional Web Developer specializing in Vue.js, Laravel, PHP, and modern frontend technologies." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400;1,14..32,700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Font override: Inter replaces Syne, Playfair Display, and DM Mono ── */
+    *, *::before, *::after { font-family: 'Inter', sans-serif !important; }
+    h1, h2, h3, h4, h5, h6,
+    .hero-name, .section-title, .exp-left-title,
+    .contact-big-text, .footer-brand, 
+    .brand { font-family: 'Inter', sans-serif !important; font-feature-settings: 'ss01', 'cv01'; }
+    em { font-style: italic; }
+    code, pre { font-family: 'Inter', monospace !important; }
+  </style>
+  <link rel="stylesheet" href="./components/styles.css">
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">Bun<em>Heng</em></a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-primary btn-sm">Hire Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-bg-num">BH</div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-kicker">
+            <div class="kicker-dot"></div>
+            <span class="kicker-text">Available for freelance &amp; full-time</span>
+          </div>
+          <h1 class="hero-name">
+            I'm<br><em>BunHeng</em>
+          </h1>
+
+          <div class="hero-role-line">
+            <span class="role-text">Currently:</span>
+            <em><span class="typewriter-wrap"><span id="typewriter"></span><span class="cursor">|</span></span></em>
+            <div class="role-rule"></div>
+          </div>
+
+          <p class="hero-sub">
+            Crafting modern, responsive websites and web applications where clean code meets polished design — delivering fast, accessible, and memorable digital experiences.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-dark">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              View My Work
+            </a>
+            <a href="resume.pdf" download class="btn btn-outline">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download CV
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <figure class="hero-photo-frame">
+            <img src="./picture/DSC_2730.JPG" alt="BunHeng" />
+            <div class="photo-tag">
+              <strong>1</strong>
+              Year experience
+            </div>
+          </figure>
+          <div class="hero-stats">
+            <div class="hstat">
+              <div class="hstat-num">4</div>
+              <div class="hstat-label">Projects</div>
+            </div>
+            <div class="hstat-sep"></div>
+            <div class="hstat">
+              <div class="hstat-num">2</div>
+              <div class="hstat-label">Clients</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-track"><div class="scroll-fill"></div></div>
+      scroll
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-section">
+    <div class="ticker-track" id="ticker">
+      <div class="ticker-item"><span class="dot"></span>Vue.js</div>
+      <div class="ticker-item"><span class="dot"></span>Laravel</div>
+      <div class="ticker-item"><span class="dot"></span>PHP</div>
+      <div class="ticker-item"><span class="dot"></span>Tailwind CSS</div>
+      <div class="ticker-item"><span class="dot"></span>JavaScript</div>
+      <div class="ticker-item"><span class="dot"></span>HTML5</div>
+      <div class="ticker-item"><span class="dot"></span>MySQL</div>
+      <div class="ticker-item"><span class="dot"></span>REST APIs</div>
+      <div class="ticker-item"><span class="dot"></span>Git</div>
+      <div class="ticker-item"><span class="dot"></span>UI/UX</div>
+      <div class="ticker-item"><span class="dot"></span>Vue.js</div>
+      <div class="ticker-item"><span class="dot"></span>Laravel</div>
+      <div class="ticker-item"><span class="dot"></span>PHP</div>
+      <div class="ticker-item"><span class="dot"></span>Tailwind CSS</div>
+      <div class="ticker-item"><span class="dot"></span>JavaScript</div>
+      <div class="ticker-item"><span class="dot"></span>HTML5</div>
+      <div class="ticker-item"><span class="dot"></span>MySQL</div>
+      <div class="ticker-item"><span class="dot"></span>REST APIs</div>
+      <div class="ticker-item"><span class="dot"></span>Git</div>
+      <div class="ticker-item"><span class="dot"></span>UI/UX</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="reveal">
+          <div class="about-left-label">About<br>Me.</div>
+          <div class="about-img-stack">
+            <img src="./picture/profile_v2.PNG" alt="BunHeng" class="about-img-main" />
+            <div class="about-img-accent">
+              <div class="big-num">100%</div>
+              <div class="small-text">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="eyebrow">About Me</div>
+          <h2 class="section-title" style="margin-bottom:1.5rem">
+            Hi, I'm BunHeng —<br><em>Web Developer</em><br>based in Cambodia
+          </h2>
+          <p class="about-p">
+            I specialize in building fast, scalable, and beautiful web applications. With a strong foundation in both frontend and backend technologies, I bridge the gap between design and engineering to create seamless digital products.
+          </p>
+          <p class="about-p">
+            My approach combines clean, maintainable code with thoughtful UI/UX decisions. Whether it's a pixel-perfect landing page or a complex web application, I bring the same level of care and attention to every project.
+          </p>
+
+          <table class="info-table">
+            <tr><td>Name</td><td><strong>BunHeng</strong></td></tr>
+            <tr><td>Location</td><td>Siem Reap, Cambodia</td></tr>
+            <tr><td>Email</td><td><a href="mailto:tonbunheng1122@gmail.com" style="color:var(--rust)">tonbunheng1122@gmail.com</a></td></tr>
+            <tr><td>Status</td><td><span class="status-dot">Available for work</span></td></tr>
+          </table>
+
+          <div style="display:flex;gap:1rem;flex-wrap:wrap">
+            <a href="#contact" class="btn btn-primary">Let's Talk</a>
+            <a href="resume.pdf" download class="btn btn-outline">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section section-dark">
+    <div class="container">
+      <div class="exp-layout">
+        <div class="reveal">
+          <div class="eyebrow" style="color:var(--gold)">Experience</div>
+          <h2 class="exp-left-title">My<br><em>jour&shy;ney.</em></h2>
+        </div>
+
+        <div class="exp-list reveal">
+          <div class="exp-item">
+            <div class="exp-top">
+              <div>
+                <div class="exp-role">Frontend Developer</div>
+                <div class="exp-where">Tech Startup · Phnom Penh</div>
+              </div>
+              <span class="exp-period">2023 — Present</span>
+            </div>
+            <p class="exp-desc">Led frontend development for multiple client projects using Vue.js and Tailwind CSS. Collaborated closely with design and backend teams to deliver pixel-perfect, performant web applications.</p>
+            <div class="exp-tags">
+              <span class="exp-tag">Vue.js</span>
+              <span class="exp-tag">Tailwind CSS</span>
+              <span class="exp-tag">JavaScript</span>
+              <span class="exp-tag">REST APIs</span>
+            </div>
+          </div>
+
+          <div class="exp-item" style="margin-top:2px">
+            <div class="exp-top">
+              <div>
+                <div class="exp-role">Fullstack Web Developer</div>
+                <div class="exp-where">Freelance</div>
+              </div>
+              <span class="exp-period">2022 — 2023</span>
+            </div>
+            <p class="exp-desc">Built end-to-end web solutions for local businesses and startups — from database design to responsive UI. Delivered 10+ projects using Laravel, PHP, and modern frontend frameworks.</p>
+            <div class="exp-tags">
+              <span class="exp-tag">Laravel</span>
+              <span class="exp-tag">PHP</span>
+              <span class="exp-tag">MySQL</span>
+              <span class="exp-tag">HTML/CSS</span>
+            </div>
+          </div>
+
+          <div class="exp-item" style="margin-top:2px">
+            <div class="exp-top">
+              <div>
+                <div class="exp-role">B.Sc. Computer Science</div>
+                <div class="exp-where">University · Phnom Penh</div>
+              </div>
+              <span class="exp-period">2019 — 2023</span>
+            </div>
+            <p class="exp-desc">Graduated with a focus on software engineering, web technologies, and database systems. Built several academic projects applying real-world development practices.</p>
+            <div class="exp-tags">
+              <span class="exp-tag">Software Engineering</span>
+              <span class="exp-tag">Databases</span>
+              <span class="exp-tag">Algorithms</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-deep">
+    <div class="container">
+      <div class="section-header reveal" style="margin-bottom:3rem">
+        <div class="eyebrow">Skills</div>
+        <h2 class="section-title">Tools &amp; technologies <em>I master</em></h2>
+      </div>
+
+      <div class="skills-intro-grid reveal">
+        <div class="skills-header-cell">
+          <div class="skills-col-label">Frontend Development</div>
+          <div class="skill-item">
+            <div class="skill-name"><div class="skill-icon"><img src="./img/html_v2.webp" alt="HTML5" /></div>HTML5</div>
+            <div class="skill-bar-wrap"><div class="skill-track"><div class="skill-fill" data-width="95"></div></div><span class="skill-pct">95%</span></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name"><div class="skill-icon"><img src="./img/css-icon.webp" alt="CSS / SCSS"></div>CSS / SCSS</div>
+            <div class="skill-bar-wrap"><div class="skill-track"><div class="skill-fill" data-width="90"></div></div><span class="skill-pct">90%</span></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name"><div class="skill-icon js-bg"><img src="./img/Js_v2.png" alt="JS" /></div>JavaScript</div>
+            <div class="skill-bar-wrap"><div class="skill-track"><div class="skill-fill" data-width="85"></div></div><span class="skill-pct">85%</span></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name"><div class="skill-icon"><img src="./img/Vue.js_v2.png" alt="Vue" /></div>Vue.js</div>
+            <div class="skill-bar-wrap"><div class="skill-track"><div class="skill-fill" data-width="82"></div></div><span class="skill-pct">82%</span></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name"><div class="skill-icon"><img src="./img/tailwindcss_v2.png" alt="Tailwind" /></div>Tailwind CSS</div>
+            <div class="skill-bar-wrap"><div class="skill-track"><div class="skill-fill" data-width="90"></div></div><span class="skill-pct">90%</span></div>
+          </div>
+            <div class="tech-pills">
+            <div class="tech-pill"><img src="./img/html_v2.webp" alt="HTML5" />HTML5</div>
+            <div class="tech-pill"><img src="./img/Js_v2.png" alt="JS" />JavaScript</div>
+            <div class="tech-pill"><img src="./img/Vue.js_v2.png" alt="Vue" />Vue.js</div>
+            <div class="tech-pill"><img src="./img/tailwindcss_v2.png" alt="Tailwind" />Tailwind</div>
+          </div>
+        </div>
+
+        <div class="skills-header-cell">
+          <div class="skills-col-label">Backend &amp; Tools</div>
+          <div class="skill-item">
+            <div class="skill-name"><div class="skill-icon"><img src="./img/php_v2.png" alt="PHP" /></div>PHP</div>
+            <div class="skill-bar-wrap"><div class="skill-track"><div class="skill-fill" data-width="80"></div></div><span class="skill-pct">80%</span></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name"><div class="skill-icon"><img src="./img/Laravel_v2.png" alt="Laravel" /></div>Laravel</div>
+            <div class="skill-bar-wrap"><div class="skill-track"><div class="skill-fill" data-width="75"></div></div><span class="skill-pct">75%</span></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name"><div class="skill-icon"> <img src="./img/mysql_v2.png" alt="MySQL / DB"></div>MySQL / DB</div>
+            <div class="skill-bar-wrap"><div class="skill-track"><div class="skill-fill" data-width="78"></div></div><span class="skill-pct">78%</span></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name"><div class="skill-icon"><img src="./img/github_v2.svg" alt="Git / GitHub"></div>Git / GitHub</div>
+            <div class="skill-bar-wrap"><div class="skill-track"><div class="skill-fill" data-width="88"></div></div><span class="skill-pct">88%</span></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name"><div class="skill-icon rust-bg" style="font-size:0.52rem;font-weight:700">API</div>REST APIs</div>
+            <div class="skill-bar-wrap"><div class="skill-track"><div class="skill-fill" data-width="83"></div></div><span class="skill-pct">83%</span></div>
+          </div>
+
+          <div class="tech-pills">
+            <div class="tech-pill"><img src="./img/php_v2.png" alt="PHP" />PHP</div>
+            <div class="tech-pill"><img src="./img/Laravel_v2.png" alt="Laravel" />Laravel</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="projects-header-row reveal">
+        <div>
+          <div class="eyebrow">Projects</div>
+          <h2 class="section-title">Featured <em>work</em></h2>
+        </div>
+        <a href="#contact" class="btn btn-outline">Let's collaborate →</a>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card pc-1 reveal">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#1c1410 0%,#2d1f14 50%,#3d2718 100%)">
+            <span class="project-num-overlay">01</span>
+            <div class="browser">
+              <div class="browser-bar"><div class="bb-dot"></div><div class="bb-dot"></div><div class="bb-dot"></div></div>
+              <div class="browser-body">
+                <div class="b-line" style="width:80%"></div>
+                <div class="b-line" style="width:55%"></div>
+                <div class="b-grid"><div class="b-card"></div><div class="b-card"></div><div class="b-card"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-eyebrow">Vue.js · Tailwind CSS · REST API</div>
+            <h3 class="project-title">Modern Web App</h3>
+            <p class="project-desc">A responsive SPA built with Vue.js featuring custom UI components, smooth animations, dark/light theme toggle, and optimized Core Web Vitals performance.</p>
+            <div class="project-tags">
+              <span class="project-tag">Vue.js</span><span class="project-tag">Tailwind CSS</span><span class="project-tag">REST API</span><span class="project-tag">SPA</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="plink plink-live"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Demo</a>
+              <a href="#" class="plink plink-code"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Source Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card pc-2 reveal" style="transition-delay:0.1s">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#0d0c0a 0%,#1a1714 100%)">
+            <span class="project-num-overlay">02</span>
+            <div class="browser">
+              <div class="browser-bar"><div class="bb-dot"></div><div class="bb-dot"></div><div class="bb-dot"></div></div>
+              <div class="browser-body">
+                <div class="b-line" style="width:90%"></div><div class="b-line" style="width:60%"></div><div class="b-line" style="width:75%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-eyebrow">Laravel · PHP · SCSS</div>
+            <h3 class="project-title">Brand Website</h3>
+            <p class="project-desc">End-to-end design system on Laravel — strong typography, full accessibility compliance, and cohesive visual identity across every breakpoint.</p>
+            <div class="project-tags"><span class="project-tag">Laravel</span><span class="project-tag">PHP</span><span class="project-tag">SCSS</span></div>
+            <div class="project-links">
+              <a href="#" class="plink plink-live"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Demo</a>
+              <a href="#" class="plink plink-code"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Source Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card pc-3 reveal" style="transition-delay:0.15s">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#100e0b 0%,#201a14 100%)">
+            <span class="project-num-overlay">03</span>
+            <div class="browser">
+              <div class="browser-bar"><div class="bb-dot"></div><div class="bb-dot"></div><div class="bb-dot"></div></div>
+              <div class="browser-body">
+                <div class="b-chart">
+                  <div class="b-bar" style="height:60%"></div><div class="b-bar" style="height:85%"></div><div class="b-bar" style="height:45%"></div><div class="b-bar" style="height:70%"></div><div class="b-bar" style="height:90%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-eyebrow">PHP · Tailwind · Chart.js</div>
+            <h3 class="project-title">Admin Dashboard</h3>
+            <p class="project-desc">Feature-rich admin panel with real-time charts, role-based access control, and fully responsive Tailwind components.</p>
+            <div class="project-tags"><span class="project-tag">PHP</span><span class="project-tag">Tailwind CSS</span><span class="project-tag">Chart.js</span></div>
+            <div class="project-links">
+              <a href="#" class="plink plink-live"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Demo</a>
+              <a href="#" class="plink plink-code"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Source Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card pc-4 reveal" style="transition-delay:0.2s">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#0f0c09 0%,#1e1812 100%); aspect-ratio:unset; min-height:200px">
+            <span class="project-num-overlay">04</span>
+            <div class="browser" style="width:70%">
+              <div class="browser-bar"><div class="bb-dot"></div><div class="bb-dot"></div><div class="bb-dot"></div></div>
+              <div class="browser-body">
+                <div class="b-line" style="width:85%"></div><div class="b-line" style="width:65%"></div><div class="b-line" style="width:78%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-eyebrow">Vue.js · Laravel · MySQL</div>
+            <h3 class="project-title">E-commerce Platform</h3>
+            <p class="project-desc">Full-featured e-commerce platform with product management, secure checkout, payment integration, and a robust inventory management system built on Laravel + Vue.</p>
+            <div class="project-tags"><span class="project-tag">Vue.js</span><span class="project-tag">Laravel</span><span class="project-tag">MySQL</span><span class="project-tag">Payment API</span></div>
+            <div class="project-links">
+              <a href="#" class="plink plink-live"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Demo</a>
+              <a href="#" class="plink plink-code"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Source Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section section-dark">
+    <div class="container">
+      <div class="reveal" style="margin-bottom:3.5rem">
+        <div class="eyebrow" style="color:var(--gold)">Services</div>
+        <h2 class="section-title" style="color:var(--paper)">What I <em style="color:var(--rust)">offer</em></h2>
+      </div>
+
+      <div class="reveal">
+        <div class="service-row">
+          <div class="service-num">01</div>
+          <div class="service-name">Web Design &amp; Development</div>
+          <div class="service-desc">Beautiful, responsive websites built from scratch — optimized for speed, accessibility, and conversion. Landing pages, corporate sites, portfolios.</div>
+          <div class="service-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">02</div>
+          <div class="service-name">Fullstack Applications</div>
+          <div class="service-desc">End-to-end web applications with robust backends, REST APIs, and polished reactive frontends. SPAs, admin panels, data-driven apps.</div>
+          <div class="service-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">03</div>
+          <div class="service-name">UI/UX Implementation</div>
+          <div class="service-desc">Translating Figma designs or wireframes into pixel-perfect, animated, accessible user interfaces. Figma to code, animations, design systems.</div>
+          <div class="service-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">04</div>
+          <div class="service-name">Maintenance &amp; Support</div>
+          <div class="service-desc">Ongoing support, performance monitoring, bug fixes, and feature additions for existing web projects. Audits, optimizations, updates.</div>
+          <div class="service-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-mid">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="reveal">
+          <div class="eyebrow">Contact</div>
+          <div class="contact-big-text">
+            Let's<br>build<br><em>great</em><br>together.
+          </div>
+          <p style="font-size:0.95rem;color:var(--muted);line-height:1.8;max-width:320px">
+            Have a project in mind? I'd love to hear about it. Send me a message and I'll get back to you within 24 hours.
+          </p>
+
+          <div class="contact-detail">
+            <div class="cd-icon-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><div class="cd-label">Email</div><div class="cd-val"><a href="mailto:tonbunheng1122@gmail.com" style="color:var(--rust)">tonbunheng1122@gmail.com</a></div></div>
+          </div>
+          <div class="contact-detail">
+            <div class="cd-icon-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="cd-label">Location</div><div class="cd-val">Siem Reap, Cambodia</div></div>
+          </div>
+          <div class="contact-detail">
+            <div class="cd-icon-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><div class="cd-label">Response Time</div><div class="cd-val">Within 24 hours</div></div>
+          </div>
+
+          <div class="socials">
+            <a href="https://github.com/tonbunheng1122-cloud" class="soc-link" title="GitHub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+            <a href="mailto:tonbunheng1122@gmail.com" class="soc-link" title="Email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Full Name <span>*</span></label>
+              <input type="text" id="fname" name="name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="femail">Email Address <span>*</span></label>
+              <input type="email" id="femail" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fsubject">Subject <span>*</span></label>
+            <input type="text" id="fsubject" name="subject" placeholder="Project inquiry, collaboration…" required />
+          </div>
+          <div class="form-group">
+            <label for="fbudget">Budget Range</label>
+            <select id="fbudget" name="budget">
+              <option value="" disabled selected>Select budget range</option>
+              <option>Under $500</option>
+              <option>$500 – $1,000</option>
+              <option>$1,000 – $3,000</option>
+              <option>$3,000 – $5,000</option>
+              <option>$5,000+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Message <span>*</span></label>
+            <textarea id="fmessage" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Message
+          </button>
+          <p class="form-success" id="formSuccess">✓ Message sent! I'll get back to you within 24 hours.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <div class="footer-brand">Bun<em>Heng</em></div>
+          <p class="footer-tagline">Building the web, one pixel at a time. Available for freelance projects worldwide.</p>
+          <div class="socials" style="margin-top:1.5rem">
+            <a href="https://github.com/tonbunheng1122-cloud" class="soc-link" title="GitHub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+            <a href="mailto:tonbunheng1122@gmail.com" class="soc-link" title="Email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Web Design</a></li>
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">Fullstack Apps</a></li>
+            <li><a href="#services">UI/UX Implementation</a></li>
+            <li><a href="#services">Maintenance</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 BunHeng. All rights reserved.</p>
+        <p>Built with <span>♥</span> using HTML, CSS &amp; JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+  <script src="./components/script.js"></script>
+</body>
+</html>
